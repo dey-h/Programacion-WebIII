@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout con Flexbox Mejorado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header, nav, footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+            flex-direction: row;
+        }
+        .left-panel, .right-panel {
+            width: 20%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .left-panel {
+            background: lightgreen;
+        }
+        .right-panel {
+            background: lightpink;
+        }
+        .content {
+            width: 60%;
+            background: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .top-content, .bottom-content {
+            background: lightgray;
+            padding: 15px;
+            text-align: center;
+        }
+        .box {
+            background: white;
+            padding: 10px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Encabezado</h1></header>
+    <nav><h2>Menú de Navegación</h2></nav>
+    <div class="container">
+        <div class="left-panel">
+            <h2>Sección Izquierda</h2>
+            <div class="box">Caja 1</div>
+            <div class="box">Caja 2</div>
+            <div class="box">Caja 3</div>
+        </div>
+        <div class="content">
+            <div class="top-content">
+                <h2>Contenido Superior</h2>
+                <p>Información principal aquí.</p>
+            </div>
+            <div class="bottom-content">
+                <h2>Contenido Inferior</h2>
+                <p>Más información en esta sección.</p>
+            </div>
+        </div>
+        <div class="right-panel">
+            <h2>Sección Derecha</h2>
+            <div class="box">Caja A</div>
+            <div class="box">Caja B</div>
+            <div class="box">Caja C</div>
+        </div>
+    </div>
+    <footer><p>Pie de página</p></footer>
+</body>
+</html>

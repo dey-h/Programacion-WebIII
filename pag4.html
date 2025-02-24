@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout con Grid Mejorado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "nav nav nav"
+                "sidebar content aside"
+                "footer footer footer";
+            grid-template-columns: 20% 60% 20%;
+            grid-template-rows: auto 50px 1fr auto;
+            min-height: 100vh;
+            gap: 10px;
+            padding: 10px;
+        }
+        header, nav, footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        header {
+            grid-area: header;
+        }
+        nav {
+            grid-area: nav;
+        }
+        .sidebar {
+            background: lightblue;
+            padding: 20px;
+            grid-area: sidebar;
+        }
+        .content {
+            background: white;
+            padding: 20px;
+            grid-area: content;
+        }
+        .aside {
+            background: lightcoral;
+            padding: 20px;
+            grid-area: aside;
+        }
+        footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header><h1>Encabezado</h1></header>
+        <nav><h2>Menú de Navegación</h2></nav>
+        <div class="sidebar">
+            <h2>Barra Lateral</h2>
+            <p>Enlaces y contenido adicional.</p>
+        </div>
+        <div class="content">
+            <h2>Contenido Principal</h2>
+            <p>Sección principal del diseño con Grid.</p>
+        </div>
+        <div class="aside">
+            <h2>Sección Extra</h2>
+            <p>Información adicional y recursos.</p>
+        </div>
+        <footer><p>Pie de página</p></footer>
+    </div>
+</body>
+</html>
